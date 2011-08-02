@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+  </head>
+  <body>
+
+    <div id="x" style="width:50px;height:50px;background:red"></div>  
+    <script>
+      volta = function(){
+        $('#x').animate({width:'50px'}, 4000, 'swing', vai)
+      }
+      vai = function(){
+        $('#x').animate({width:'500px'}, 4000, 'swing', volta)
+      }
+      vai()
+    </script>
+  </body>
+</html>

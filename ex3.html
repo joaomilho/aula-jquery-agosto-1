@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+  </head>
+  <body>
+
+  
+    <script>
+     function r(n){
+       return parseInt(n*Math.random())
+     }
+     for(i=0; i<30; i++){
+       $('<div></div>')
+         .css({position:'absolute',
+                height:r(100),
+                width:r(100),
+                top:r(400),
+                left:r(800),
+                opacity:Math.random(),
+                background:'rgb('+r(255)+','+r(255)+','+r(255)+')'})
+         .appendTo('body')
+
+     }
+    </script>
+  </body>
+</html>
