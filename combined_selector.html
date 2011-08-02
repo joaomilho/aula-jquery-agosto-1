@@ -1,0 +1,24 @@
+<html>
+  <head>
+   <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div class="a"></div><div></div><div></div>
+    <em></em><em></em><em class="a"></em>
+    <cite></cite><cite class="a"></cite><cite></cite>
+
+    <span>
+      <address></address>
+    </span>
+    <address></address>
+
+    <script>
+      $('div').text('DIV')
+      $('em').text('EM')
+      $('cite').text('CITE')
+
+      $('div.a').text('DIV A')
+      $('span address').text('ADRESS IN SPAN')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <ul>
+      <li>Arroz</li>
+      <li>Feijão</li>
+      <li>Café</li>
+      <li>Sal</li>
+      <li></li>
+      <li>Óleo</li>
+    </ul>
+    <script>
+      $('body').css({background: '#999'})
+      $('li').css({borderTop: '2px solid black',
+                    borderBottom: '2px solid white'})
+      $('li:first').css({borderTop: 'none'})
+      $('li:last').css({borderBottom: 'none'})
+      $('li:eq(2)').css({background: 'yellow'})
+      $('li:empty').css({background: '#444'})
+      v = 'Sal'
+      $('li:contains('+v+')').css({background: 'green'})
+    </script>
+  </body>
+</html>

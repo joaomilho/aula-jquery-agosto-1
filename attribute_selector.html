@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+  </head>
+  <body>
+    <input type="search" /><br />
+    <a rel="external" href="http://www.yahoo.com">Yahoo</a>    
+    <a rel="external" href="http://www.google.com">Google</a>
+    <a rel="internal" href="#footer">Descer</a>
+    <select id="uf">
+      <option value="rs">RS</option>
+      <option value="sc">SC</option>
+      <option value="pr">PR</option>
+    </select>
+   
+    <script>
+      $('input[type="search"]').css({background:'#cef'})
+      $('a[href^="#"]').css({color: 'orange'})
+      $('a[href]').css({textDecoration: 'none'})
+      $('a[href*="google"]').css({color: 'red'})
+      $('#uf option[value="rs"]').css({background: 'red'})
+      $('#uf option[value!="rs"]').css({background: 'yellow'})
+    </script>
+  </body>
+</html>

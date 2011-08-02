@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c">Lorem ipsum dolor sit amet</div>
+  
+    <script>
+      $('#a').text('<i>Teste</i>')
+
+      $('#b')
+        .html('<i>Teste</i>')
+        .append(' funciona')
+        .prepend('Este ')
+        .before('BEFORE')
+        .after('AFTER')
+
+      var html = $('#c').html()
+      $('#c').html( html.replace('ipsum','<b>ipsum</b>') )
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+Ex1: 
+Os THs dentro do cabeçalho devem ter o texto THH
+Os THs dentro do corpo devem ter o texto THB
+Os TDs dentro do corpo devem ter o texto TDB
+Os TDs com class x devem ter o texto X
+
+<table>
+ <thead>
+   <tr>
+     <th></th><th></th><th></th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th></th><td></td><td></td>
+   </tr>
+   <tr>
+     <th></th><td></td><td class="x"></td>
+   </tr>
+ </tbody>
+</table>

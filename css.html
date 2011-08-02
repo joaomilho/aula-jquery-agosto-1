@@ -1,0 +1,22 @@
+<html>
+  <head>
+   <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div id="x"></div>
+    <div id="y"></div>
+    <div id="z"></div>
+   
+    <script>
+      // x = document.getElementById('x')
+      // x.style.backgroundColor = 'red'
+      // x.style.color = 'white'
+
+$('#x').css({height:'40px', background:'red', color:'white'}).text('Works!')
+$('#y').css({height:'10px', background:'green', border:'5px dotted yellow'})
+$('#z').css({position:'absolute', height:'80px', width:'80px', 
+  background: 'blue', top: '5px', left: '200px', opacity: '0.5'})
+      
+    </script>
+  </body>
+</html>

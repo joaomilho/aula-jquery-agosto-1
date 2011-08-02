@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div id="a"></div>
+  
+    <script>
+      $('<div></div>')
+        .css({height:'80px', background:'red'})
+        .insertAfter('#a')
+        .clone()
+        .css({background:'magenta'})
+        .insertBefore('#a')
+      alert( parseInt(Math.random()*255) )
+    </script>
+  </body>
+</html>
