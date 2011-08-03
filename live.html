@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <style>div{ background: red;height:30px }</style>
+    <button id="cria_div">Cria nova div!</button>
+    <div></div>
+    <div></div>
+    <div></div>
+  
+    <script>
+$('#cria_div').click(function(){
+  $('<div></div>').appendTo('body')
+})
+$('div').live('mouseover', function(){
+  $(this).css('background','yellow')
+})
+    </script>
+  </body>
+</html>

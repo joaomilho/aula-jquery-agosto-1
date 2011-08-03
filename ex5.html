@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <style>
+      li{ font-size: 12px }
+    </style>
+    <ul>
+      <li>Missão</li>
+      <li>Visão</li>
+      <li>Quem somos</li>
+      <li>Valores</li>
+      <li>Produtos</li>
+      <li>Contato</li>
+    </ul>
+    <script>
+     $('li')
+       .mouseover(function(){
+         $(this).stop().animate({fontSize:'20px'})
+       })
+       .mouseout(function(){
+         $(this).stop().animate({fontSize:'12px'})
+       })
+      
+    </script>
+  </body>
+</html>

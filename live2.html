@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+
+    <fieldset class="nome">
+      Nome: <input type="text" />
+    </fieldset>
+    <button id="mais">+</button>
+ 
+
+    <script>
+var nome = $('.nome').clone()
+$('#mais').click(function(){
+  nome.clone().insertAfter('.nome:last')
+})
+
+$('input').live('change', function(){
+  if( ! $(this).val() ){
+    $(this)
+      .css('background','red')
+      .after('Campo obrigatório')
+  }
+})
+    </script>
+  </body>
+</html>

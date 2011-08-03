@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+  </head>
+  <body>
+    <button id="a">A!</button>
+    <button id="b">B!</button>
+    <script>
+      // document.getElementById('a').onclick = function(){ alert('clicou em A') }
+      // document.getElementById('a').onclick = function(){ alert('clicou novamente em A') }
+      
+      $('#a').click(function(){
+        alert('Funciona')
+      })
+      $('#a').click(function(){
+        alert(' mesmo!')
+      })
+      $('#b')
+        .dblclick(function(){
+          alert('DBL!')
+        })
+        .mouseover(function(){
+          $(this).css('background','red')
+        })
+      
+    </script>
+  </body>
+</html>
