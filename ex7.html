@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+<style>
+.news{ display: none }
+</style>
+<button id="anterior">&laquo; Anterior</button>
+<button id="proxima">Próxima &raquo;</button>
+<div id="alvo"></div>
+
+<script>
+$('#alvo').load('news0.html', function(){
+ $('.news:first').show()
+})
+var current_news = 0
+$('#proxima').click(function(){
+  $('.news:visible').slideUp()
+
+  current_news++
+  if(current_news == 3) current_news = 0
+  $('#alvo').load('news'+current_news+'.html', function(){
+    $('.news:first').slideDown()
+  })
+})
+$('#proxima').click(function(){
+  $('.news:visible').slideUp()
+
+  current_news--
+  if(current_news == 0) current_news = 2
+  $('#alvo').load('news'+current_news+'.html', function(){
+    $('.news:first').slideDown()
+  })
+})
+
+
+</script>
+  </body>
+</html>

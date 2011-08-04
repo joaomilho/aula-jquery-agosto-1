@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <form id="f">
+      <input type="text" name="nome" placeholder="Nome" />
+      <input type="text" name="email" placeholder="Email" />
+      <input type="submit" />
+    </form>
+    <script>
+      $('#f').submit(function(){
+        var data = $(this).serialize()
+        $.post('salva.php', data)
+          .success(function(){ alert('ok') })
+          .error(function(){ alert('not ok') })
+           
+        return false
+      })
+    </script>
+  </body>
+</html>

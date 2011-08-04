@@ -1,0 +1,8 @@
+Ex6:
+
+-> Criar 6 notícias com título e uma descrição; Apenas a 1a notícia deve estar visível;
+-> Criar 2 botões: Anterior e Próximo;
+-> Ao clicar no botão Anterior, mostrar a notícia anterior;
+-> Ao clicar no botão Próximo, mostrar a notícia posterior;
+
+slideUp / slideDown

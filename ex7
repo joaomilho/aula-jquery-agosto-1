@@ -1,0 +1,4 @@
+Ex7:
+-> Partindo do ex6, carregar as notícias dinamicamente por AJAX;
+-> As notícias devem ficar em arquivos separados e devem ser carregadas ao clicar em proximo/anterior.
+

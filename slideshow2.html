@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+<style>
+img{ width: 400px; height: 200px; position: absolute; display: none }
+img:first-child{ display: block }
+.b.selected{ color: red }
+</style>
+<a class="b selected" href="#">&bull;</a>
+<a class="b" href="#">&bull;</a>
+<a class="b" href="#">&bull;</a>
+<a class="b" href="#">&bull;</a>
+<a class="b" href="#">&bull;</a>
+<div id="container">
+  <img src="images1.jpg" />
+  <img src="images2.jpg" />
+  <img src="images3.jpg" />
+  <img src="images4.jpg" />
+  <img src="images5.jpg" />
+</div>
+
+
+<script>
+var current_image = 0
+var images = $('#container img')
+var bulls = $('a.b')
+function proxima(){
+  images.eq(current_image).fadeOut()
+  bulls.eq(current_image).removeClass('selected')
+  current_image++
+  if(current_image == images.length) current_image = 0
+  images.eq(current_image).fadeIn()
+  bulls.eq(current_image).addClass('selected')
+  var to = setTimeout(proxima, 5000)
+}
+var to = setTimeout(proxima, 5000)
+bulls.click(function(){
+  var idx = $(this).index('a.b')
+  images.eq(current_image).fadeOut()
+  bulls.eq(current_image).removeClass('selected')
+  current_image = idx
+  images.eq(current_image).fadeIn()
+  $(this).addClass('selected')
+  clearInterval(interval)
+})
+</script>
+  </body>
+</html>

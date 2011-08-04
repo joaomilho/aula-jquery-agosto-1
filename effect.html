@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+
+<button id="ba">Busca avançada</button>
+<div style="background:#def;padding:30px;display:none">
+Campo: <br /><input type="text" /><br />
+Campo: <br /><input type="text" /><br />
+Campo: <br /><input type="text" /><br />
+</div>
+
+    <script>
+      $('#ba').click(function(){
+       // var div = $(this).next()
+       // if( div.is(':visible') )
+       //   div.hide()
+       // else
+       //   div.show()
+       $(this).next().toggle(400)
+      })
+    </script>
+  </body>
+</html>

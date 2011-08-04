@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+ 
+    <button id="rs">RS</button>
+    <button id="sc">SC</button>
+    <button id="pr">PR</button>
+    <div id="alvo" style="border:5px solid red"></div>
+    <script>
+      $('#rs').click(function(){
+        $.getJSON('rs.json', function(json){
+          ul = $('<ul></ul>').appendTo('#alvo')
+          $.each(json, function(){
+            $('<li>'+this+'</li>').appendTo(ul)
+          })
+
+        })       
+      })
+    </script>
+  </body>
+</html>
