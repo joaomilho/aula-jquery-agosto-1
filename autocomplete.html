@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <script src="jquery.js"></script>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <input type="text" id="search" placeholder="Preencha para pesquisar..." />
+    <div id="resultado"
+    style="width:180px;border:1px solid black;display:none">
+     Default content
+    </div>
+    <script>
+      $('#search').keypress(function(){
+        // "resultado.php?search=" + $(this).val()
+        $('#resultado').load('resultado.html', function(){
+          $(this).slideDown()
+        })
+      })
+      $('#resultado a').live('click', function(){
+        $('#search').val( $(this).text() )
+        $('#resultado').slideUp()
+      })
+    </script>
+  </body>
+</html>

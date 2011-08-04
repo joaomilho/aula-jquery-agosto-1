@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <style>
+      .drag, .drag-grid, .drag-handler{ border: 1px solid black; background:red; width:50px; height:50px; float:left }
+       .drag-grid{background:green}
+       .drag-handler{background:blue}
+       .handler{background:yellow}
+    </style>
+    <div class="drag"></div>
+    <div class="drag"></div>
+    <div class="drag"></div>
+    <div class="drag"></div>
+    <div class="drag"></div>
+    <div class="drag-grid"></div>
+
+    <div class="drag-handler">
+      <div class="handler">AQUI</div>
+      AQUI NÃO
+    </div>
+
+    <script>
+      // window.onload = function(){ ... }
+      $(function(){
+        $('.drag').draggable({snap: true})
+        $('.drag-grid').draggable({grid: [40,40]})
+        $('.drag-handler').draggable({handle: '.handler'})
+      })
+    </script>
+  </body>
+</html>

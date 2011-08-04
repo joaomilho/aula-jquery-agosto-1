@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <style>
+     .drag{ width:30px; height:30px; background:black; }
+     .drop{ width:130px; height:130px; background:yellow; }
+    </style>
+    <div class="drag"></div>
+    <div class="drop"></div>
+
+    <script>
+      $('.drag').draggable()
+      $('.drop').droppable({drop:function(){
+        $(this).css('background','red')
+      }})
+    </script>
+  </body>
+</html>
