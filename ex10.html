@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.8.14.custom/js/jquery-ui-1.8.14.custom.min.js">
+    </script>
+    <link href="jquery-ui-1.8.14.custom/css/ui-lightness/jquery-ui-1.8.14.custom.css" type="text/css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+
+    <div id="start" title="Iniciar">
+      <p>Clique no botão para iniciar a corrida!</p>
+    </div>
+    <div id="p1" class="progress"></div>
+    <div id="p2" class="progress"></div>
+    <div id="p3" class="progress"></div>
+
+    <div id="winner" title="O vencedor...">
+      <p></p>
+    </div>
+
+    <script>
+     $(function(){
+
+       $('.progress').progressbar({value:0})
+       var p1 = 0, p2 = 0, p3 = 0
+       $('#start').dialog({modal: true, buttons:{
+         "Iniciar corrida":function(){
+           $(this).dialog('close')
+           var interval = setInterval(function(){
+             p1 += Math.random()*8
+             p2 += Math.random()*8
+             p3 += Math.random()*8
+             $('#p1').progressbar('value',p1)
+             $('#p2').progressbar('value',p2)
+             $('#p3').progressbar('value',p3)
+             if(p1 >= 100)
+               $('#winner').dialog().find('p').text('O vencedor foi o 1')
+             if(p2 >= 100)
+               $('#winner').dialog().find('p').text('O vencedor foi o 2')
+             if(p3 >= 100)
+               $('#winner').dialog().find('p').text('O vencedor foi o 3')
+             if(p1 >= 100 || p2 >= 100 || p3 >= 100)
+               clearInterval(interval)
+           }, 1000)
+         }
+       }})
+     })
+    </script>
+  </body>
+</html>

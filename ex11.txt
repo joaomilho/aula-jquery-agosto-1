@@ -1,0 +1,5 @@
+Ex10:
+-> Criar uma confirmação modal com o botão "iniciar corrida";
+-> Criar 3 progressbars;
+-> A cada segundo aumentar um valor aleatório de 0 a 2 em cada progressbar;
+-> Quando a primeira progressbar chegar em 100, apresentar um modal informando a vencedora;
