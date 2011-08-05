@@ -1,0 +1,14 @@
+Ex9:
+1. Criar na esquerda da página uma lista de produtos (apenas nome);
+2. Cada produto vai ter um atributo "data-price";
+3. Criar na direita uma lista vazia, mas visível por css;
+4. Permitir o reordemento das duas listas e, quado um item for colocado na lista
+direita, apresentar em algum local a soma dos prices dos itens dessa lista;
+
+Dicas:
+  Pegar valor de atributo: $('elemento').attr('atributo')
+  Percorrer uma lista:  $('elementos').each(function(){ ...this...  })
+
+
+
+

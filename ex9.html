@@ -10,6 +10,23 @@
   </head>
   <body>
 
+    <style>
+      .products{
+        border: 1px solid black;
+        float: left;
+      }
+      .cart{
+        border: 1px solid black;
+        min-height: 50px;
+        float: right;
+      }
+      #total{
+        font-size: 50px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
     <ul class="products">
       <li data-price="2">Arroz</li>
       <li data-price="4">Feijão</li>
@@ -21,9 +38,16 @@
 
     <div id="total">0</total>
 
-   
+
 
     <script>
+$('.cart, .products').sortable({connectWith:'.cart, .products',receive:function(){
+  var total = 0
+  $('.cart li').each(function(){
+    total += $(this).attr('data-price')*1
+  })
+  $('#total').text(total)
+}})
     </script>
   </body>
 </html>
