@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.8.14.custom/js/jquery-ui-1.8.14.custom.min.js">
+    </script>
+    <link href="jquery-ui-1.8.14.custom/css/ui-lightness/jquery-ui-1.8.14.custom.css" type="text/css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div id="dialog" title="Confirmação">
+      <p>Você está seguro de que quer excluir todo o banco de dados?</p>
+    </div>
+    <button id="excluir">Excluir banco de dados</button>
+    <script>
+     $(function(){
+       $('#dialog').dialog({modal: true, autoOpen:false, buttons:{
+         "Sim, excluir o banco.":function(){ $(this).dialog('close') }
+       }})
+
+       $('#excluir').click(function(){
+         $('#dialog').dialog('open')
+       })
+
+     })
+    </script>
+  </body>
+</html>
