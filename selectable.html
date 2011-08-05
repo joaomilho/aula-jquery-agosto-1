@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.8.14.custom/js/jquery-ui-1.8.14.custom.min.js">
+    </script>
+    <link href="jquery-ui-1.8.14.custom/css/ui-lightness/jquery-ui-1.8.14.custom.css" type="text/css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <style>
+      .ui-selectee{ background:yellow }
+      .ui-selected{ background:red }
+    </style>
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+
+    <script>
+        $('#list').selectable()
+    </script>
+  </body>
+</html>

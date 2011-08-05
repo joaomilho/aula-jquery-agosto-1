@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <style>
+      .product{ width: 150px; height: 150px; background: #ddd; border:1px solid black; float: left; z-index: 2 }
+      .product img{ width: 100px; height: 100px;}
+      #cart{ background: yellow; height:200px; position:absolute; bottom:0; width: 100%; z-index: 1 }
+    </style>
+    <div class="product">
+      <div class="name">iPhone preto</div>
+      <div class="image"><img src="iphone1.jpg" /></div>
+      <div class="price">100</div>
+    </div>
+    <div class="product">
+      <div class="name">iPhone preto 2</div>
+      <div class="image"><img src="iphone2.jpg" /></div>
+      <div class="price">150</div>
+    </div>
+    <div class="product">
+      <div class="name">iPhone prateado</div>
+      <div class="image"><img src="iphone3.jpg" /></div>
+      <div class="price">200</div>
+    </div>
+    <div id="cart">Arraste os produtos aqui</div>
+    <script>
+      $('.product').draggable({revert:true})
+      var total = 0
+      $('#cart').droppable({drop:function(event, ui){
+        var price = ui.draggable.find('.price').text()*1
+        total += price
+        $(this).text("Total: " + total)
+      }})
+    </script>
+  </body>
+</html>

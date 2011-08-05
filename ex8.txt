@@ -1,0 +1,17 @@
+Ex8:
+1. Fazer o download de 3 imagens de produtos;
+2. Colocar as imagens em uma div e também na mesma div criar um elemento com o valor do produto. Ex:
+
+<div class="product">
+  <div class="name">iPhone vermelho</div>
+  <div class="image"><img src="..." /></div>
+  <div class="price">100</div>
+</div>
+
+3. Definir todos os produtos como movíveis.
+4. Criar uma área amarela com o texto "arraste os produtos aqui" e torne esta área um droppable;
+5. Ao mover um produto para a área, atualize em algum lugar o total do pedido, imaginando
+que largar o produto alí seja uma adição ao carrinho.
+
+Dica: Usar a opção {revert:true} nos draggables.
+
