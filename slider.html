@@ -9,10 +9,13 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   </head>
   <body>
-
+    <div id="v"></div>
     <div id="slide"></div>
     <script>
-      $('#slide').slider({range:true, min:0, max:100, values:[0,20]})
+      $('#slide').slider({range:true, min:0, max:100, values:[0,20],
+      slide:function(e,ui){
+        $('#v').text('Entre ' + ui.values[0] + ' e ' + ui.values[1])
+      }})
     </script>
   </body>
 </html>
