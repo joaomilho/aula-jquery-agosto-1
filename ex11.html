@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.8.14.custom/js/jquery-ui-1.8.14.custom.min.js">
+    </script>
+    <link href="jquery-ui-1.8.14.custom/css/ui-lightness/jquery-ui-1.8.14.custom.css" type="text/css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+
+    <div id="r"></div>
+    <div id="g"></div>
+    <div id="b"></div>
+    <div id="w"></div>
+    <div id="h"></div>
+
+    <div id="alvo" style="background:black;width:0;height:0;"></div>
+
+    <script>
+      atualiza_cor = function(){
+        var r = $('#r').slider('value')
+        var g = $('#g').slider('value')
+        var b = $('#b').slider('value')
+        var rgb = 'rgb('+r+','+g+','+b+')'
+        $('#alvo').css({background:rgb})
+      }
+      $('#r').slider({min:0,max:255,slide:atualiza_cor})
+      $('#g').slider({min:0,max:255,slide:atualiza_cor})
+      $('#b').slider({min:0,max:255,slide:atualiza_cor})
+
+      $('#w').slider({min:0,max:800,slide:function(){
+        $('#alvo').css({width: $(this).slider('value')})
+      }})
+      $('#h').slider({min:0,max:550,slide:function(){
+        $('#alvo').css({height: $(this).slider('value')})
+      }})
+    </script>
+  </body>
+</html>

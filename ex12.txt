@@ -1,0 +1,6 @@
+Ex11:
+-> Criar 2 abas: Editar e Visualizar.
+-> Numa aba vai ter um form com título, data inicial, data final e um botão de submit (salvar);
+-> Na segunda aba, deve apresentar os dado do evento (título e datas);
+-> Ao clicar no botão de salvar, deve validar os campos, atualizar os valores que estão na 2a aba e mudar a aba.
+

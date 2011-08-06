@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.8.14.custom/js/jquery-ui-1.8.14.custom.min.js">
+    </script>
+    <script src="http://jquery-ui.googlecode.com/svn/trunk/ui/i18n/jquery.ui.datepicker-pt-BR.js"></script>
+    <link href="jquery-ui-1.8.14.custom/css/ui-lightness/jquery-ui-1.8.14.custom.css" type="text/css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div id="event">
+      <ul>
+        <li><a href="#editar">Editar</a></li>
+        <li><a href="#visualizar">Visualizar</a></li>
+      </ul>
+      <div id="editar">
+        <form id="form_evento">
+         Título <input type="text" id="titulo" /><br />
+         Início <input type="text" id="inicio" /><br />
+         Fim <input type="text" id="fim" /><br />
+         <input type="submit" />
+        </form>
+      </div>
+      <div id="visualizar">
+        <div id="titulo_info"></div>
+        <div id="inicio_info"></div>
+        <div id="fim_info"></div>
+      </div>
+    </div>
+    <script>
+      $('#event').tabs()
+      $('#inicio, #fim').datepicker()
+      $('#form_evento').submit(function(){
+        if( ! $('#titulo').val() ){
+          alert('Preencha o título')
+          $('#titulo').focus()
+          return false
+        }
+        if( ! $('#inicio').val() ){
+          alert('Preencha o início')
+          $('#inicio').focus()
+          return false
+        }
+        if( ! $('#fim').val() ){
+          alert('Preencha o fim')
+          $('#fim').focus()
+          return false
+        }
+        $('#titulo_info').text( $('#titulo').val() )
+        $('#inicio_info').text( $('#inicio').val() )
+        $('#fim_info').text( $('#fim').val() )
+        $('#event').tabs('select',1)
+        return false
+      })
+    </script>
+  </body>
+</html>

@@ -9,16 +9,18 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   </head>
   <body>
-    <style>
-     .ui-widget-header{background: #0f0 !important}
-    </style>
-    <div id="v"></div>
-    <div id="slide"></div>
+    <div id="tabs">
+        <ul>
+          <li><a href="#news1">News1</a></li>
+          <li><a href="#news2">News2</a></li>
+          <li><a href="#news3">News3</a></li>
+        </ul>
+        <div id="news1">Esta é a primeira notícia</div>
+        <div id="news2">Esta é a segunda notícia</div>
+        <div id="news3">Esta é a terceira notícia</div>
+    </div>
     <script>
-      $('#slide').slider({range:true, min:0, max:100, values:[0,20],
-      slide:function(e,ui){
-        $('#v').text('Entre ' + ui.values[0] + ' e ' + ui.values[1])
-      }})
+      $('#tabs').tabs({cookie:{expires:1}})
     </script>
   </body>
 </html>
