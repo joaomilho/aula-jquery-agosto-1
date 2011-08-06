@@ -10,50 +10,18 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   </head>
   <body>
-    <div id="event">
-      <ul>
-        <li><a href="#editar">Editar</a></li>
-        <li><a href="#visualizar">Visualizar</a></li>
-      </ul>
-      <div id="editar">
-        <form id="form_evento">
-         Título <input type="text" id="titulo" /><br />
-         Início <input type="text" id="inicio" /><br />
-         Fim <input type="text" id="fim" /><br />
-         <input type="submit" />
-        </form>
-      </div>
-      <div id="visualizar">
-        <div id="titulo_info"></div>
-        <div id="inicio_info"></div>
-        <div id="fim_info"></div>
-      </div>
+    <div id="accordion">
+      <h3><a href="#">Item1</a></h3>
+      <div><p>Conteúdo do Item 1</p></div>
+      <h3><a href="#">Item2</a></h3>
+      <div><p>Conteúdo do Item 2</p></div>
+      <h3><a href="#">Item3</a></h3>
+      <div><p>Conteúdo do Item 3</p></div>
+      <h3><a href="#">Item4</a></h3>
+      <div><p>Conteúdo do Item 4</p></div>
     </div>
     <script>
-      $('#event').tabs()
-      $('#inicio, #fim').datepicker()
-      $('#form_evento').submit(function(){
-        if( ! $('#titulo').val() ){
-          alert('Preencha o título')
-          $('#titulo').focus()
-          return false
-        }
-        if( ! $('#inicio').val() ){
-          alert('Preencha o início')
-          $('#inicio').focus()
-          return false
-        }
-        if( ! $('#fim').val() ){
-          alert('Preencha o fim')
-          $('#fim').focus()
-          return false
-        }
-        $('#titulo_info').text( $('#titulo').val() )
-        $('#inicio_info').text( $('#inicio').val() )
-        $('#fim_info').text( $('#fim').val() )
-        $('#event').tabs('select',1)
-        return false
-      })
+      $('#accordion').accordion({collapsible:true})
     </script>
   </body>
 </html>
